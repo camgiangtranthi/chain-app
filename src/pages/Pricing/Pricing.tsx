@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const Pricing = () => {
     return (
-        <div>
+        <Link to="/pricing">
             <h1>Pricing</h1>
-        </div>
+        </Link>
     );
 };
 

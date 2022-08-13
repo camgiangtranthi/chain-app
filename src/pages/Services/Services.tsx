@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const Service = () => {
     return (
-        <div>
+        <Link to="services">
             <h1>Services</h1>
-        </div>
+        </Link>
     );
 };
 

@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 const Newsletter = () => {
     return (
-        <div>
+        <Link to="/newsletter">
             <h1>Newsletter</h1>
-        </div>
+        </Link>
     );
 };
 
