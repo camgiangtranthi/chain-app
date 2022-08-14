@@ -16,8 +16,8 @@ const NavBar = () => {
         { name: 'Newsletter', path: '/newsletter' },
     ];
     return (
-        <div className="navbar">
-            <div className="container">
+        <div className="container">
+            <div className="navbar">
                 <a href="/" className="navbar__brand">
                     <img src="/images/logo.png" alt="logo" />
                 </a>

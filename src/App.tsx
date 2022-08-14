@@ -6,7 +6,7 @@ function App() {
     return (
         <Router>
             <NavBar />
-            <div className="container">
+            <div className="app">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/services" element={<Services />} />
