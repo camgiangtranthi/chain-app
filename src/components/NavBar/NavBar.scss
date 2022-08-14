@@ -1,0 +1,72 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    border-bottom: 1px solid #eaeaea;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+
+    .container {
+        min-width: 1000px;
+        min-height: var(--default-layout-header-height);
+        display: flex;
+        flex-direction: center;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+
+        .navbar__content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 40px;
+            height: 40px;
+
+            .navbar__links {
+                a {
+                    padding: 0 20px;
+                    color: var(--text-color);
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    text-transform: capitalize;
+                    letter-spacing: 1px;
+                    transition: all 0.3s ease 0s;
+
+                    &:hover {
+                        color: var(--primary);
+                    }
+                }
+
+                .active {
+                    color: var(--primary);
+                    position: relative;
+                    transition: all 0.3s ease 0s;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 80%;
+                        height: 0.5px;
+                        background-color: #4b8ef1;
+                        left: 50%;
+                        bottom: -40px;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+
+            .navbar__btn {
+                button {
+                    background-image: var(--button-color);
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    color: var(--white);
+                    padding: 10px 20px;
+                    margin-left: 20px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
