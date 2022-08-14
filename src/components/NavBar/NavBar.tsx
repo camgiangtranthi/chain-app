@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './NavBar.scss';
 
 interface Links {
     name: string;
@@ -15,13 +16,23 @@ const NavBar = () => {
     ];
     return (
         <div className="navbar">
-            <a href="/" className="logo"></a>
-            <div className="navbar__links">
-                {links.map((link) => (
-                    <Link to={link.path}>{link.name}</Link>
-                ))}
+            <div className="container">
+                <a href="/" className="navbar__brand">
+                    <img src="/images/logo.png" alt="logo" />
+                </a>
+                <div className="navbar__content">
+                    <div className="navbar__links">
+                        {links.map((link, index) => (
+                            <Link key={index} to={link.path}>
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="navbar__btn">
+                        <button>Sign In Now</button>
+                    </div>
+                </div>
             </div>
-            hello
         </div>
     );
 };
