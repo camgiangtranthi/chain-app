@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './NavBar.scss';
 
 interface Links {
@@ -7,6 +7,7 @@ interface Links {
 }
 
 const NavBar = () => {
+    const location = useLocation();
     const links: Links[] = [
         { name: 'Home', path: '/' },
         { name: 'Services', path: '/services' },
@@ -23,7 +24,11 @@ const NavBar = () => {
                 <div className="navbar__content">
                     <div className="navbar__links">
                         {links.map((link, index) => (
-                            <Link key={index} to={link.path}>
+                            <Link
+                                className={location.pathname === link.path ? 'active' : ''}
+                                to={link.path}
+                                key={link.name}
+                            >
                                 {link.name}
                             </Link>
                         ))}

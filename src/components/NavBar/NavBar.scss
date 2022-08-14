@@ -35,6 +35,23 @@
                         color: var(--primary);
                     }
                 }
+
+                .active {
+                    color: var(--primary);
+                    position: relative;
+                    transition: all 0.3s ease 0s;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 80%;
+                        height: 0.5px;
+                        background-color: #4b8ef1;
+                        left: 50%;
+                        bottom: -40px;
+                        transform: translateX(-50%);
+                    }
+                }
             }
 
             .navbar__btn {
