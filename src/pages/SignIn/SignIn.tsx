@@ -1,4 +1,5 @@
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 import './SignIn.scss';
 
 type Inputs = {
@@ -18,12 +19,19 @@ const SignIn = () => {
 
     return (
         <div className="signin">
+            <h2 className="signin__title">Sign In</h2>
             <form className="signin__form" onSubmit={handleSubmit(onSubmit)}>
-                <input {...register('username', { required: true, maxLength: 20 })} />
+                <label htmlFor="username">Username </label>
+                <input id="username" {...register('username', { required: true, maxLength: 20 })} />
                 {errors.username && <span>Username is required</span>}
-                <input {...register('password', { required: true })} />
+                <label htmlFor="password">Password </label>
+                <input id="password" {...register('password', { required: true })} />
                 {errors.password && <span>Password is required</span>}
-                <input type="submit" />
+                <button>Sign in</button>
+                <div>
+                    <span>Don't have an account</span>
+                    <Link to="signup">Sign up</Link>
+                </div>
             </form>
         </div>
     );
