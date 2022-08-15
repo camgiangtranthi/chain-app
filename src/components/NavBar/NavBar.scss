@@ -58,6 +58,13 @@
             }
 
             .navbar__btn {
+                svg {
+                    font-size: 1.5rem;
+                    color: var(--white);
+                    font-weight: 700;
+                    margin-right: 4px;
+                }
+
                 button {
                     background-image: var(--button-color);
                     font-size: 1.5rem;

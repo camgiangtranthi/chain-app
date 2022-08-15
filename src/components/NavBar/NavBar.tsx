@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { LoginOutlined } from '@ant-design/icons';
 import { SignIn } from '../../pages';
 import './NavBar.scss';
 
@@ -38,7 +39,10 @@ const NavBar = () => {
                             ))}
                         </div>
                         <div onClick={() => setShowSignIn(!showSignIn)} className="navbar__btn">
-                            <button>Sign In Now</button>
+                            <button>
+                                <LoginOutlined />
+                                Sign In Now
+                            </button>
                         </div>
                     </div>
                 </div>
